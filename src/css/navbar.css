@@ -1,0 +1,79 @@
+/* Navbar.css */
+.menu {
+    display: flex;
+    margin: 3rem 0;
+    background-color: #333;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.navbar {
+    color: #fff;
+    padding: 10px;
+}
+
+.nav-menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+
+.nav-item {
+    margin-right: 20px;
+    position: relative;/* Needed for the dropdown */
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 15px;
+}
+
+.nav-item a:hover {
+    color: gray;
+}
+
+/* Dropdown styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 120px;
+    z-index: 1;
+    letter-spacing: 3px;
+    padding: 0 10px;
+}
+
+.nav-item:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    color: gray;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    text-align: left;
+    color: #fff;
+}
+
+.shopping-icon, .search-icon {
+    list-style-type: none;
+    color: #fff;
+}
+
+.shopping-icon:hover, .search-icon:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+.cart-count {
+    background-color: gray;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 70%;
+}

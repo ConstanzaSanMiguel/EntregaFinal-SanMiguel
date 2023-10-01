@@ -1,0 +1,8 @@
+.productContainer {
+    background-color: #a39e9e;
+    padding-bottom: 50vh;
+}
+
+.productContainer h1, .productContainer div {
+    margin-left: 2rem;
+}
