@@ -1,41 +1,43 @@
-
 import CartWidget from './CartWidget'
 import '../css/navbar.css'
+import { Menu, MenuButton, MenuList, MenuItem, Flex, Box, Spacer } from '@chakra-ui/react'
 
 const Navbar = () => {
+    const basicNavbarStyle = {
+        background: '#333',
+    }
+
     return (
         <>
-            <div className="menu">
-                <div><a href="#"><img src="src\images\vibelogo.png" alt="Vibe logo" /></a></div>
-                <nav className="navbar">
-                    <ul className="nav-menu">
-                        <li className="nav-item">
-                            <a href="#">Home</a>
-                        </li>
-                        <li className="nav-item dropdown">
-                            <a href="#">Kpop albums<i className="fa-solid fa-angle-down"></i></a>
-                            <div className="dropdown-content">
-                                <a href="#">Shop by group <i className="fa-solid fa-angle-right"></i></a>
-                                <a href="#">Shop by solo <i className="fa-solid fa-angle-right"></i></a>
-                                <a href="#">Hot groups <i className="fa-solid fa-angle-right"></i></a>
-                            </div>
-                        </li>
-                        <li className="nav-item dropdown">
-                            <a href="#">Kpop merch / DVD<i className="fa-solid fa-angle-down"></i></a>
-                            <div className="dropdown-content">
-                                <a href="#">Official goods</a>
-                                <a href="#">Official lightsticks</a>
-                                <a href="#">Hot sale</a>
-                            </div>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#">Latest</a>
-                        </li>
-                        <li className="search-icon"><i className="fa-solid fa-magnifying-glass fa-rotate-90"></i></li>
-                    </ul>
-                </nav>
-                <CartWidget />
-            </div>
+            <Flex className='menu'>
+                <Box>
+                    <img src="src\images\vibelogo.png" alt="Vibe logo" />
+                </Box>
+                <Spacer />
+                <Box className='navbar'>
+                    <Menu className='nav-menu'>
+                        <MenuButton className='nav-item'>
+                            Kpop albums / merch / DVD<i className="fa-solid fa-angle-down"></i>
+                        </MenuButton>
+                        <MenuList sx={basicNavbarStyle}>
+                            <MenuItem sx={basicNavbarStyle} className='dropdown-content'>Shop by group</MenuItem>
+                            <MenuItem sx={basicNavbarStyle} className='dropdown-content'>Shop by solo</MenuItem>
+                            <MenuItem sx={basicNavbarStyle} className='dropdown-content'>Hot groups</MenuItem>
+                            <MenuItem sx={basicNavbarStyle} className='dropdown-content'>Official goods</MenuItem>
+                            <MenuItem sx={basicNavbarStyle} className='dropdown-content'>Official lightsticks</MenuItem>
+                            <MenuItem sx={basicNavbarStyle} className='dropdown-content'>Hot sale</MenuItem>
+                        </MenuList>
+                    </Menu>
+                </Box>
+                <Spacer />
+                <Box className='nav-item'>
+                    <i className="fa-solid fa-magnifying-glass fa-rotate-90 search-icon"></i>
+                </Box>
+                <Spacer />
+                <Box>
+                    <CartWidget />
+                </Box>
+            </Flex >
         </>
     )
 }
