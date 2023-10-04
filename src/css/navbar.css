@@ -1,4 +1,8 @@
 /* Navbar.css */
+.logoVibe {
+    cursor: pointer;
+}
+
 .menu {
     display: flex;
     background-color: #333;
@@ -17,8 +21,10 @@
 }
 
 .navbar {
+    display: flex;
     color: #fff;
     padding: 10px;
+    gap: 2rem;
 }
 
 .nav-menu {
