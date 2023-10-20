@@ -1,6 +1,8 @@
 import CartWidget from './CartWidget'
 import '../css/navbar.css'
 import { Menu, MenuButton, MenuList, MenuItem, Flex, Box, Spacer } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
+import imageLogo from '../images/vibelogo.png'
 
 const Navbar = () => {
     const basicNavbarStyle = {
@@ -11,29 +13,34 @@ const Navbar = () => {
         <>
             <Flex className='menu'>
                 <Box>
-                    <img className='logoVibe' src="src\images\vibelogo.png" alt="Vibe logo" />
+                    <Link to={"/"}>
+                        <img className='logoVibe' src={imageLogo} alt="Vibe logo" />
+                    </Link>
                 </Box>
                 <Spacer />
                 <Box className='navbar'>
                     <Menu className='nav-menu'>
-                        <MenuButton className='nav-item'>
+                        <MenuButton className='nav-item' border='none'>
                             Kpop albums<i className="fa-solid fa-angle-down"></i>
                         </MenuButton>
                         <MenuList sx={basicNavbarStyle}>
-                            <MenuItem sx={basicNavbarStyle} className='dropdown-content'>Shop by group</MenuItem>
-                            <MenuItem sx={basicNavbarStyle} className='dropdown-content'>Shop by solo</MenuItem>
-                            <MenuItem sx={basicNavbarStyle} className='dropdown-content'>Hot groups</MenuItem>
+                            <Link to={`/category/${'Group'}`}>
+                                <MenuItem sx={basicNavbarStyle} className='dropdown-content'  _hover={{ borderColor: '#333' }}>Shop by group</MenuItem>
+                            </Link>
+                            <Link to={`/category/${'Solo'}`}>
+                                <MenuItem sx={basicNavbarStyle} className='dropdown-content'  _hover={{ borderColor: '#333' }}>Shop by solo artists</MenuItem>
+                            </Link>
                         </MenuList>
                     </Menu>
                     <Spacer />
                     <Menu className='nav-menu'>
-                        <MenuButton className='nav-item'>
+                        <MenuButton className='nav-item' border='none' >
                             Kpop merch / DVD<i className="fa-solid fa-angle-down"></i>
                         </MenuButton>
                         <MenuList sx={basicNavbarStyle}>
-                            <MenuItem sx={basicNavbarStyle} className='dropdown-content'>Official goods</MenuItem>
-                            <MenuItem sx={basicNavbarStyle} className='dropdown-content'>Official lightsticks</MenuItem>
-                            <MenuItem sx={basicNavbarStyle} className='dropdown-content'>Hot sale</MenuItem>
+                            <MenuItem sx={basicNavbarStyle} className='dropdown-content'  _hover={{ borderColor: '#333' }}>Official goods</MenuItem>
+                            <MenuItem sx={basicNavbarStyle} className='dropdown-content'  _hover={{ borderColor: '#333' }}>Official lightsticks</MenuItem>
+                            <MenuItem sx={basicNavbarStyle} className='dropdown-content'  _hover={{ borderColor: '#333' }}>Hot sale</MenuItem>
                         </MenuList>
                     </Menu>
                 </Box>
@@ -43,7 +50,9 @@ const Navbar = () => {
                 </Box>
                 <Spacer />
                 <Box>
-                    <CartWidget />
+                    <Link to={"/cart"}>
+                        <CartWidget />
+                    </Link>
                 </Box>
             </Flex >
         </>

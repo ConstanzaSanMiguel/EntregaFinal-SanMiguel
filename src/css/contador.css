@@ -1,0 +1,4 @@
+.cartButtons {
+    display: flex;
+    flex-direction: column;
+}

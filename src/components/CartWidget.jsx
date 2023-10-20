@@ -4,9 +4,9 @@ const CartWidget = () => {
 
     return (
         <div className="cart-widget">
-            <li className="shopping-icon">
+            <div className="shopping-icon">
                 <i className="fas fa-shopping-cart"></i>
-            </li>
+            </div>
             {numeroProductos >= 0 && (
                 <div className="cart-count">{numeroProductos}</div>
             )}
