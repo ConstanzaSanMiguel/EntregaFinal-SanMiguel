@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import '../css/itemlist.css'
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
+import { Box } from '@chakra-ui/react'
 
 
 const ItemListContainer = () => {
@@ -17,25 +18,8 @@ const ItemListContainer = () => {
         { id: "9", name: "Treasure EP.3: One To All - ATEEZ", description: "Album", category: "Group", price: "11500" },
         { id: "10", name: "RED - The Rose", description: "Album", category: "Group", price: "9200" },
         { id: "11", name: "130 Mood : TRBL - DEAN", description: "Album", category: "Solo", price: "9500" },
+        { id: "12", name: "Take - SHAUN", description: "Album", category: "Solo", price: "9500" },
     ]
-
-    // const showProducts = new Promise((resolve, reject) => {
-    //     if (products.length > 0) {
-    //         setTimeout(() => {
-    //             resolve(products)
-    //         }, 3000)
-    //     } else {
-    //         reject("Please wait, loading products...")
-    //     }
-    // })
-
-    // showProducts
-    //     .then((resultado) => {
-    //         console.log(resultado)
-    //     })
-    //     .catch((error) => {
-    //         console.log(error)
-    //     })
 
     const { category } = useParams()
     const [categoryFilteredProducts, setCategoryFilteredProducts] = useState([])
@@ -51,7 +35,9 @@ const ItemListContainer = () => {
 
     return (
         <>
-            <ItemList products={categoryFilteredProducts} />
+            <Box display='flex' flexWrap='wrap' alignItems='center' justifyContent='space-around' gap='20px' >
+                <ItemList products={categoryFilteredProducts} />
+            </Box>
         </>
     )
 }
