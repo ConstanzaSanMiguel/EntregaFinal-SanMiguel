@@ -1,8 +1,8 @@
-# React + Vite
+Esta es la segunda pre-entrega del curso de React Js en Coderhouse. 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Es una single-page application de una tienda de (por ahora únicamente) álbumes de artistas de K-Pop.
 
-Currently, two official plugins are available:
+El gif a continuación muestra la navegabilidad del sitio.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img src='/src/images/vibegif.gif'></img>
+
