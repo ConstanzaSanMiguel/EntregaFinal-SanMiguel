@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState } from 'react'
 import { Button, Box, ButtonGroup } from '@chakra-ui/react'
 import '../css/contador.css'
+import { CartContext } from '../context/CartContext'
 
 const Contador = (prods) => {
 
@@ -24,7 +25,8 @@ const Contador = (prods) => {
                     +
                 </Button>
             </ButtonGroup>
-            <Button variant='ghost' colorScheme='teal' borderColor='#ccd0d5' _hover={{ borderColor: 'teal' }} onClick={addToCart} marginTop={2}>Add to cart</Button>
+            <Button variant='ghost' colorScheme='teal' borderColor='#ccd0d5' _hover={{ borderColor: 'teal' }} onClick={addToCart} marginTop={2}>
+                Add to cart</Button>
         </Box>
     )
 }

@@ -7,3 +7,22 @@
 .productContainer h1, .productContainer div {
     margin-left: 2rem;
 }
+
+.productStyle {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 30px;
+    color: #a82626;
+    margin-top: 3rem;
+    text-shadow: #b59797 1.5px 1.5px;
+}

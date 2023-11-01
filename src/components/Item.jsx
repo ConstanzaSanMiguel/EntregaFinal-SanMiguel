@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, CardBody, Flex, Image, Stack, Heading, Divider, CardFooter, ButtonGroup, Button } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
-const Item = ({ name, image, id }) => {
+const Item = ({ name, image, id, price }) => {
     return (
         <>
             <Flex minWidth='max-content' flexDirection='row' flexWrap='wrap'>

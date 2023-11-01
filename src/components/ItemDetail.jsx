@@ -1,13 +1,13 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { Card, CardBody, Image, Heading, Text, Stack, Divider, CardFooter, Button, ButtonGroup } from '@chakra-ui/react'
-import Contador from './Contador'
+import ItemCount from './ItemCount'
 
-const ItemDetail = ({ products }) => {
+const ItemDetail = ({ product }) => {
 
     const { id } = useParams()
 
-    const filteredProduct = products.filter((producto) => producto.id === id)
+    const filteredProduct = product.filter((producto) => producto.id === id)
     console.log(filteredProduct)
 
     return (
@@ -23,7 +23,7 @@ const ItemDetail = ({ products }) => {
                                         <Heading size='md' fontSize='2xl'>{p.name}</Heading>
                                     </Stack>
                                     <Text>
-                                        {p.description}
+                                        #{p.id}, {p.description}
                                     </Text>
                                     <Text>
                                         ${p.price}
@@ -32,7 +32,7 @@ const ItemDetail = ({ products }) => {
                                 <Divider />
                                 <CardFooter>
                                     <ButtonGroup spacing='2' mt={1} >
-                                            <Contador prods={p.name} />
+                                        <ItemCount product={p} />
                                     </ButtonGroup>
                                 </CardFooter>
                             </Card>
