@@ -17,6 +17,7 @@ const ItemListContainer = () => {
         getDocs(itemsCollection)
             .then((snapshot) => {
                 const docs = snapshot.docs.map((doc) => doc.data())
+                console.log(docs)
                 setProducts(docs)
             })
             .catch((error) => {

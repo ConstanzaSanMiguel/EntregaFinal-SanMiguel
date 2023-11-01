@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { Button, Box, ButtonGroup } from '@chakra-ui/react'
-import '../css/contador.css'
 import { CartContext } from '../context/CartContext'
 import { Link } from 'react-router-dom'
+import '../css/contador.css'
 
 const ItemCount = ({ product }) => {
     const [contador, setContador] = useState(0)

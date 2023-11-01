@@ -13,24 +13,25 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         const db = getFirestore()
 
-        const oneItem = doc(db, "kpop-albums", `${id}`)
+        const oneItem = doc(db, "kpop-albums", id)
 
         getDoc(oneItem)
             .then((snapshot) => {
                 if (snapshot.exists()) {
                     const docs = snapshot.data()
-                    setProduct(docs)
+                    setProduct({ ...docs, id: id })
                 }
             })
     }, [])
 
-    return (
-        <>
-            <Box display='flex' alignItems='center' justifyContent='center'  >
-                <ItemDetail products={product} />
-            </Box>
-        </>
-    )
+    if (product) {
+        return (
+            <>
+                <Box display='flex' alignItems='center' justifyContent='center'  >
+                    <ItemDetail product={product} />
+                </Box>
+            </>
+        )
+    }
 }
-
 export default ItemDetailContainer
