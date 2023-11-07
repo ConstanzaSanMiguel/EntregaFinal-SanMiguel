@@ -26,3 +26,30 @@
     margin-top: 3rem;
     text-shadow: #b59797 1.5px 1.5px;
 }
+
+.productName {
+    
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.productImage {
+    align-content: center;
+    text-align: center;
+}
+
+.productDescription {
+    font-size: 14px;
+    text-align: justify;
+    text-align-last: center;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.productPrice {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(159, 27, 27);
+}

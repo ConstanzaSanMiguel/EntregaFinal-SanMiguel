@@ -18,6 +18,7 @@ const ItemList = ({ products }) => {
                                     id={product.id}
                                     name={product.name}
                                     description={product.description}
+                                    image={product.image}
                                     price={product.price}
                                 />
                             )

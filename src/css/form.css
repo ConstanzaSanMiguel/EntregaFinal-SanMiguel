@@ -1,0 +1,38 @@
+.form {
+    display: block;
+    padding: 3rem 0;
+    margin: 15px 20%;
+    background-color: rgba(137, 46, 159, 0.308);
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: teal 1px 1px;
+}
+
+.orderForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.orderForm input {
+    margin: 1rem;
+    background-color: rgba(128, 128, 128, 0.13);
+    width: 80%;
+}
+
+.submitForm {
+    padding: 0 15%;
+}
+
+.orderID {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 10px;
+    font-style: italic;
+}

@@ -32,21 +32,6 @@ const Navbar = () => {
                             </Link>
                         </MenuList>
                     </Menu>
-                    <Spacer />
-                    <Menu className='nav-menu'>
-                        <MenuButton className='nav-item' border='none' >
-                            Kpop merch / DVD<i className="fa-solid fa-angle-down"></i>
-                        </MenuButton>
-                        <MenuList sx={basicNavbarStyle}>
-                            <MenuItem sx={basicNavbarStyle} className='dropdown-content'  _hover={{ borderColor: '#333' }}>Official goods</MenuItem>
-                            <MenuItem sx={basicNavbarStyle} className='dropdown-content'  _hover={{ borderColor: '#333' }}>Official lightsticks</MenuItem>
-                            <MenuItem sx={basicNavbarStyle} className='dropdown-content'  _hover={{ borderColor: '#333' }}>Hot sale</MenuItem>
-                        </MenuList>
-                    </Menu>
-                </Box>
-                <Spacer />
-                <Box className='nav-item'>
-                    <i className="fa-solid fa-magnifying-glass fa-rotate-90 search-icon"></i>
                 </Box>
                 <Spacer />
                 <Box>

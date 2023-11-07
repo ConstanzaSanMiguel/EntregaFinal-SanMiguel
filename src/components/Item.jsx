@@ -2,13 +2,13 @@ import React from 'react'
 import { Card, CardBody, Flex, Image, Stack, Heading, Divider, CardFooter, ButtonGroup, Button } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
-const Item = ({ name, image, id, price }) => {
+const Item = ({ name, image, id }) => {
     return (
         <>
             <Flex minWidth='max-content' flexDirection='row' flexWrap='wrap'>
-                <Card w='400px' h='250px' maxW='sm' variant='outline' align='center' margin={1} display='flex' >
+                <Card w='400px' maxW='sm' variant='outline' align='center' margin={1} display='flex' >
                     <CardBody>
-                        <Image /> <p>Image here</p>
+                        <Image src={image} alt="" />
                         <Stack mt='6' spacing='3'>
                             <Heading size='md' fontSize='2xl'>{name}</Heading>
                         </Stack>

@@ -29,7 +29,7 @@
 .productInCart {
     display: flex;
     justify-content: space-between;
-    margin: 0 5rem;
+    margin-left: 3rem;
 }
 
 .productInCartDescription {
@@ -57,4 +57,18 @@
     font-weight: 500;
     background-color: rgb(237, 233, 233);
     padding: 1rem 0 0.5rem 0;
+}
+
+.cartDetail {
+    display: inline-flex;
+}
+
+.imageInCart {
+    width: 15%;
+    height: auto;
+    border: solid 2px #362f2f;
+}
+
+.deleteButton {
+    margin-left: 10rem;
 }
