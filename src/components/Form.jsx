@@ -4,9 +4,8 @@ import { Button } from '@chakra-ui/react'
 import { collection, addDoc, getFirestore } from 'firebase/firestore'
 import '../css/form.css'
 
-
 const Form = () => {
-    const { cart, clearCart } = useContext(CartContext)
+    const { cart, clearCart, total } = useContext(CartContext)
 
     const [name, setName] = useState("")
     const [surname, setSurname] = useState("")
@@ -21,16 +20,17 @@ const Form = () => {
         addDoc(ordersCollection, order)
             .then(({ id }) => setOrderId(id))
         alert('Thanks for the purchase!')
-        setTimeout(() => {
+        setTimeout(() => { // el setTimeout está para que se vea la orden de compra antes de que se borre el carrito
             clearCart();
-        }, 2000)
+        }, 5000)
     }
 
     const order = {
         buyer: {
             name,
             surname,
-            email
+            email,
+            total
         },
         items: cart.map(item => ({
             name: item.name,
@@ -38,7 +38,6 @@ const Form = () => {
             price: item.price,
         }))
     }
-
 
     const ordersCollection = collection(db, "MyOrder")
 

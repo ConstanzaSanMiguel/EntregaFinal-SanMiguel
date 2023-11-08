@@ -1,8 +1,7 @@
 import CartWidget from './CartWidget'
-import '../css/navbar.css'
-import { Menu, MenuButton, MenuList, MenuItem, Flex, Box, Spacer } from '@chakra-ui/react'
+import { Menu, MenuItem, Flex, Box, Spacer } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
-import imageLogo from '../images/vibelogo.png'
+import '../css/navbar.css'
 
 const Navbar = () => {
     const basicNavbarStyle = {
@@ -14,30 +13,23 @@ const Navbar = () => {
             <Flex className='menu'>
                 <Box>
                     <Link to={"/"}>
-                        <img className='logoVibe' src={imageLogo} alt="Vibe logo" />
+                        <img className='logoVibe' src='https://firebasestorage.googleapis.com/v0/b/vibe-kpop.appspot.com/o/vibelogo.png?alt=media&token=963f7853-dde2-4c70-ba3c-902772596569&_gl=1*1ylj9p9*_ga*MTIyMTg5MTMzMi4xNjk4NzkxOTAy*_ga_CW55HF8NVT*MTY5OTM5Njg3OC4xNC4xLjE2OTkzOTg2NjIuMjkuMC4w' alt="Vibe logo" />
                     </Link>
                 </Box>
                 <Spacer />
                 <Box className='navbar'>
                     <Menu className='nav-menu'>
-                        <MenuButton className='nav-item' border='none'>
-                            Kpop albums<i className="fa-solid fa-angle-down"></i>
-                        </MenuButton>
-                        <MenuList sx={basicNavbarStyle}>
                             <Link to={`/category/${'Group'}`}>
-                                <MenuItem sx={basicNavbarStyle} className='dropdown-content'  _hover={{ borderColor: '#333' }}>Shop by group</MenuItem>
+                                <MenuItem sx={basicNavbarStyle} className='dropdown-content' _hover={{ borderColor: '#333' }}>Shop by group</MenuItem>
                             </Link>
                             <Link to={`/category/${'Solo'}`}>
-                                <MenuItem sx={basicNavbarStyle} className='dropdown-content'  _hover={{ borderColor: '#333' }}>Shop by solo artists</MenuItem>
+                                <MenuItem sx={basicNavbarStyle} className='dropdown-content' _hover={{ borderColor: '#333' }}>Shop by solo artists</MenuItem>
                             </Link>
-                        </MenuList>
                     </Menu>
                 </Box>
                 <Spacer />
                 <Box>
-                    <Link to={"/cart"}>
-                        <CartWidget />
-                    </Link>
+                    <CartWidget/>
                 </Box>
             </Flex >
         </>

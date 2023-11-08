@@ -4,8 +4,6 @@ import Loader from './Loader.jsx'
 import '../css/itemlist.css'
 
 const ItemList = ({ products }) => {
-    console.log(products)
-
     return (
         <>
             {

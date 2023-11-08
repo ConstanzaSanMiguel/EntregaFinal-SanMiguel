@@ -1,15 +1,9 @@
-/* Navbar.css */
-.logoVibe {
-    cursor: pointer;
-}
-
 .menu {
     display: flex;
     background-color: #333;
     letter-spacing: 3px;
     text-transform: uppercase;
     align-items: center;
-
     padding: 0 5px;
 }
 
@@ -17,7 +11,7 @@
     display: flex;
     flex-direction: row;
     margin: 0 2rem;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .navbar {
@@ -34,18 +28,16 @@
     margin: 0;
 }
 
-.dropdown-content {
-    padding: 0 10px;
-    text-align: left;
-    color: #fff;
-}
-
-.shopping-icon, .search-icon {
+.shopping-icon {
     list-style-type: none;
     color: #fff;
 }
 
-.shopping-icon:hover, .search-icon:hover, .dropdown-content:hover {
+.widget {
+    margin-right: 2rem;
+}
+
+.shopping-icon:hover{
     cursor: pointer;
     color: gray;
 }

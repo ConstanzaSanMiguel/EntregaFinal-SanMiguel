@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         const db = getFirestore()
 
-        const oneItem = doc(db, "kpop-albums", id)
+        const oneItem = doc(db, "kpop-albums", `${id}`)
 
         getDoc(oneItem)
             .then((snapshot) => {

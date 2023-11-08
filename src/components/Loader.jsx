@@ -1,7 +1,5 @@
 import { Box, Spinner } from '@chakra-ui/react'
-import React from 'react'
 import '../css/itemlist.css'
-
 
 const Loader = () => {
     return (
@@ -19,7 +17,5 @@ const Loader = () => {
         </>
     )
 }
-<Spinner>
 
-</Spinner>
 export default Loader

@@ -58,7 +58,7 @@ const Cart = () => {
                     </Button>
                 </ButtonGroup>
             </div>
-            {showForm && <Form />} {/* Mostrar el formulario si showForm es true */}
+            {showForm && <Form />}
         </div>
     );
 }

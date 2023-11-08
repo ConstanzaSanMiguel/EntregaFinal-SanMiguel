@@ -1,7 +1,6 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
 import { Link } from 'react-router-dom'
-
 
 const CartWidget = () => {
     const { cart } = useContext(CartContext)
@@ -11,10 +10,12 @@ const CartWidget = () => {
     return (
         <>
             <Link to='/cart' className="cartWidget" style={{ display: totalQuantity > 0 ? 'block' : 'none' }} >
-                <div className="shopping-icon">
-                    <i className="fas fa-shopping-cart"></i>
+                <div className='widget'>
+                    <div className="shopping-icon">
+                        <i className="fas fa-shopping-cart"></i>
+                    </div>
+                    {totalQuantity}
                 </div>
-                {totalQuantity}
             </Link>
         </>
     )

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 import { Button, Box, ButtonGroup } from '@chakra-ui/react'
 import { CartContext } from '../context/CartContext'
 import { Link } from 'react-router-dom'
@@ -11,7 +11,6 @@ const ItemCount = ({ product }) => {
 
     const handleAddToCart = () => {
         if (contador > 0) {
-            console.log(`Product: ${product.name}, Price: ${product.price}, Quantity: ${contador}`)
             addItem(product, contador)
             setAddedToCart(true)
         }

@@ -1,17 +1,11 @@
-import React from 'react'
 import { Card, CardBody, Image, Heading, Text, Stack, Divider, CardFooter, Button, ButtonGroup } from '@chakra-ui/react'
 import ItemCount from './ItemCount'
 
 const ItemDetail = ({ product }) => {
-
-    console.log(product)
-        console.log(`${product.name}-${product.id}-${product.description}- ${product.price}- ${product.image} `)
-
     return (
         <>
             <Card maxW='sm' variant='outline' align='center' margin={1} display='flex' >
                 <CardBody>
-
                     <Stack mt='6' spacing='3'>
                         <Heading size='md' fontSize='2xl' className='productName'>{product.name}</Heading>
                     </Stack>
