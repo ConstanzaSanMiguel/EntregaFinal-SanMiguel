@@ -3,12 +3,25 @@ Esta es la entrega final del curso de React Js en Coderhouse.
 Es una single-page application de una tienda de álbumes de artistas de K-Pop.
 
 ## Para inicializar el proyecto
-npm i
-npm run dev
+- npm i
+- npm run dev
 
 ## Librería utilizada
 - Chakra UI
 
-El gif a continuación muestra la navegabilidad del sitio.
+# Vistas
+- Home
+![Vista Productos](./src/images/vibehome.jpg)
 
-<img src='https://firebasestorage.googleapis.com/v0/b/vibe-kpop.appspot.com/o/vibegif.gif?alt=media&token=1226914d-7509-45d5-b3d8-46e539046678'></img>
+- Detalle de producto
+![Vista Producto seleccionado](./src/images/vibeitemdetail.jpg)
+
+- Carrito
+![Vista Producto en carrito](./src/images/vibecart.jpg)
+
+- Formulario de compra
+![Vista Formulario de compra](./src/images/vibeform.jpg)
+
+## Navegabilidad del sitio (gif)
+![Gif navegabilidad del sitio](./src/images/vibegif.gif)
+

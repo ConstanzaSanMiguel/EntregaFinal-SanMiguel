@@ -9,7 +9,7 @@ const Item = ({ name, image, id }) => {
                     <CardBody>
                         <Image src={image} alt="" />
                         <Stack mt='6' spacing='3'>
-                            <Heading size='md' fontSize='2xl'>{name}</Heading>
+                            <Heading size='md' fontSize='2xl' align='center'>{name}</Heading>
                         </Stack>
                     </CardBody>
                     <Divider />

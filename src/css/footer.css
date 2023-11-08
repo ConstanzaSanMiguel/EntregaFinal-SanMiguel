@@ -1,0 +1,19 @@
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+    font-size: 11px;
+    color: #fff;
+    padding: 1.5rem;
+}
+
+.footer li {
+    list-style-type: none;
+}
+
+.footerLink:hover {
+    cursor: pointer;
+}

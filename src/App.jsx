@@ -5,6 +5,7 @@ import Cart from "./components/Cart"
 import Form from "./components/Form"
 import ItemDetailContainer from "./components/ItemDetailContainer"
 import CartProvider from "./context/CartContext"
+import Footer from "./components/Footer"
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
             <Route exact path='/cart' element={<Cart />} />
             <Route exact path="/checkout" element={<Form />} />
           </Routes>
+          <Footer />
         </CartProvider>
       </BrowserRouter>
     </>

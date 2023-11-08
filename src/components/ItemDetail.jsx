@@ -4,7 +4,7 @@ import ItemCount from './ItemCount'
 const ItemDetail = ({ product }) => {
     return (
         <>
-            <Card maxW='sm' variant='outline' align='center' margin={1} display='flex' >
+            <Card maxW='md' variant='outline' align='center' margin={1} display='flex' >
                 <CardBody>
                     <Stack mt='6' spacing='3'>
                         <Heading size='md' fontSize='2xl' className='productName'>{product.name}</Heading>
